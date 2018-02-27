@@ -1,7 +1,7 @@
 /* eslint-disable no-unused-vars */
-var timer {
-  seconds: 0
-  mins: 0
+var timer = {
+  seconds: 0,
+  mins: 0,
   tenths: 0
 }
 
@@ -9,11 +9,16 @@ var getTenths = document.getElementById('tenths')
 var getSeconds = document.getElementById('seconds')
 var getMins = document.getElementById('mins')
 var start = document.getElementById('start')
+var pause = document.getElementById('pause')
 
 var interval
 
 start.onclick = function () {
-  interval = setInterval(startTimer, 10)
+  interval = setInterval (startTimer, 10)
+}
+
+pause.onclick = function () {
+  clearInterval(interval)
 }
 
 function startTimer() {
