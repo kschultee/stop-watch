@@ -7,9 +7,11 @@ var getSeconds = document.getElementById('seconds')
 var getMins = document.getElementById('mins')
 var start = document.getElementById('start')
 var interval
+
 start.onclick = function () {
   interval = setInterval(startTimer, 10)
 }
+
 function startTimer() {
   tenths++
   if (tenths < 9) {
