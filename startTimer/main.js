@@ -9,6 +9,7 @@ var getTenths = document.getElementById('tenths')
 var getSeconds = document.getElementById('seconds')
 var getMins = document.getElementById('mins')
 var start = document.getElementById('start')
+
 var interval
 
 start.onclick = function () {
