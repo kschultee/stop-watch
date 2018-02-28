@@ -10,15 +10,27 @@ var getSeconds = document.getElementById('seconds')
 var getMins = document.getElementById('mins')
 var start = document.getElementById('start')
 var pause = document.getElementById('pause')
+var reset = document.getElementById('reset')
 
 var interval
 
 start.onclick = function () {
+  clearInterval(interval)
   interval = setInterval (startTimer, 10)
 }
 
 pause.onclick = function () {
   clearInterval(interval)
+}
+
+reset.onclick = function () {
+  clearInterval(interval)
+  timer.tenths = 0
+  getTenths.textContent = '00'
+  timer.seconds = 0
+  getSeconds.textContent = '00'
+  timer.mins = 0
+  getMins.textContent = '00'
 }
 
 function startTimer() {
