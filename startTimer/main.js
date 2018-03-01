@@ -11,8 +11,6 @@ var getMins = document.getElementById('mins')
 var start = document.getElementById('start')
 var pause = document.getElementById('pause')
 var reset = document.getElementById('reset')
-// var input = document.getElementById('input').value
-// var numbers = input.split(':')
 var interval
 
 start.onclick = function () {
@@ -32,10 +30,6 @@ reset.onclick = function () {
   getSeconds.textContent = '00'
   timer.mins = 0
   getMins.textContent = '00'
-}
-
-submit.onclick = function () {
-  clearInterval(interval)
 }
 
 function startTimer() {

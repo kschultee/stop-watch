@@ -1,21 +1,31 @@
 #start,
 #pause,
 #reset {
-  background-color: aqua;
+  background-color: hsla(0, 0%, 11%, 1);
   border-radius: 50%;
   font-size: 64px;
-  color: orange;
+  color: hsl(2, 75%, 64%);
   display: inline-block;
   text-align: center;
+  border-color: hsl(2, 75%, 64%);
 }
 
 div {
   text-align: center;
   font-size: 32px;
+  font-family: 'Share Tech Mono', monospace;
 }
 
 p {
   height: auto;
   text-align: center;
   font-size: 100px;
+  margin-bottom: 50px;
+  font-family: 'Share Tech Mono', monospace;
+}
+
+html,
+body {
+  background-color: hsl(2, 75%, 64%);
+  color: hsla(0, 0%, 11%, 1);
 }
