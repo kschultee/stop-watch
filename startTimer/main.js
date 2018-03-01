@@ -1,7 +1,7 @@
 /* eslint-disable no-unused-vars */
 var timer = {
-  seconds: 0,
   mins: 0,
+  seconds: 0,
   tenths: 0
 }
 
@@ -11,7 +11,6 @@ var getMins = document.getElementById('mins')
 var start = document.getElementById('start')
 var pause = document.getElementById('pause')
 var reset = document.getElementById('reset')
-
 var interval
 
 start.onclick = function () {
@@ -34,26 +33,30 @@ reset.onclick = function () {
 }
 
 function startTimer() {
-  timer.tenths++
-  if (timer.tenths < 9) {
-    getTenths.textContent = '0' + timer.tenths
-  }
-  if (timer.tenths > 9) {
-    getTenths.textContent = timer.tenths
-  }
-  if (timer.tenths > 99) {
-    timer.seconds++
-    getSeconds.textContent = '0' + timer.seconds
-    timer.tenths = 0
-    getTenths.textContent = '0' + 0
-  }
-  if (timer.seconds > 9) {
-    getSeconds.textContent = timer.seconds
-  }
-  if (timer.seconds > 59) {
-    timer.mins++
-    getMins.textContent = '0' + timer.mins
-    timer.seconds = 0
-    getSeconds.textContent = '0' + 0
+  var input = document.getElementById('input').value
+  var numbers = input.split(':')
+  if(parseInt(numbers[0]) !== timer.mins || parseInt(numbers[1]) !== timer.seconds || parseInt(numbers[2]) !== timer.tenths) {
+    timer.tenths++
+    if (timer.tenths < 9) {
+      getTenths.textContent = '0' + timer.tenths
+    }
+    if (timer.tenths > 9) {
+      getTenths.textContent = timer.tenths
+    }
+    if (timer.tenths > 99) {
+      timer.seconds++
+      getSeconds.textContent = '0' + timer.seconds
+      timer.tenths = 0
+      getTenths.textContent = '0' + 0
+    }
+    if (timer.seconds > 9) {
+      getSeconds.textContent = timer.seconds
+    }
+    if (timer.seconds > 59) {
+      timer.mins++
+      getMins.textContent = '0' + timer.mins
+      timer.seconds = 0
+      getSeconds.textContent = '0' + 0
+    }
   }
 }
